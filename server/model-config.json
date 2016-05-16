@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "member": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "cloudant",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "Role": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "customer": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "note": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "scribble": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "container": {
+    "dataSource": "files",
+    "public": true
+  },
+  "product": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "document": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "publication": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "pricetype": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "color": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "advertisementtype": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "price": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "docs": {
+    "dataSource": "documents",
+    "public": true
+  }
+}

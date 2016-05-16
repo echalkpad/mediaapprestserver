@@ -1,0 +1,27 @@
+{
+  "cloudant": {
+    "host": "dccea645-84ce-4c67-aeaf-0456b0ea7b14-bluemix.cloudant.com",
+    "port": 443,
+    "database": "db_1",
+    "username": "dccea645-84ce-4c67-aeaf-0456b0ea7b14-bluemix",
+    "password": "0e706b86bfc8aa859afea068b6f4761ebd96257e7fe56ca366ce2794427f0927",
+    "name": "cloudant",
+    "connector": "cloudant"
+  },
+  "files": {
+    "name": "files",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./files/"
+  },
+  "documents": {
+    "name": "documents",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./documents/"
+  },
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  }
+}

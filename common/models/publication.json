@@ -1,0 +1,66 @@
+{
+  "name": "publication",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "product": {
+      "type": "belongsTo",
+      "model": "product",
+      "foreignKey": "productId"
+    },
+    "pricetype": {
+      "type": "hasAndBelongsToMany",
+      "model": "pricetype",
+      "foreignKey": ""
+    },
+    "color": {
+      "type": "hasAndBelongsToMany",
+      "model": "color",
+      "foreignKey": ""
+    },
+    "advertisementtype": {
+      "type": "hasAndBelongsToMany",
+      "model": "advertisementtype",
+      "foreignKey": ""
+    },
+    "price": {
+      "type": "hasMany",
+      "model": "price",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

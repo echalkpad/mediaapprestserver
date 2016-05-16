@@ -1,0 +1,72 @@
+{
+  "name": "member",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "emailVerified": false
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "hasMany",
+      "model": "customer",
+      "foreignKey": ""
+    },
+    "note": {
+      "type": "hasMany",
+      "model": "note",
+      "foreignKey": ""
+    },
+    "scribble": {
+      "type": "hasMany",
+      "model": "scribble",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+   { 
+	"accessType": "*", 
+      "principalType": "ROLE", 
+       "principalId": "$everyone", 
+       "permission": "DENY" 
+     }, 
+    { 
+       "accessType": "READ", 
+       "principalType": "ROLE", 
+       "principalId": "admin", 
+       "permission": "ALLOW" 
+     }, 
+     { 
+       "accessType": "READ", 
+      "principalType": "ROLE", 
+       "principalId": "$owner", 
+       "permission": "ALLOW" 
+    }, 
+     { 
+      "accessType": "EXECUTE", 
+	  "principalType": "ROLE", 
+       "principalId": "admin", 
+       "permission": "ALLOW", 
+       "property": "create" 
+     }, 
+    { 
+      "accessType": "WRITE", 
+       "principalType": "ROLE", 
+       "principalId": "admin", 
+       "permission": "ALLOW" 
+     } 
+
+  ],
+  "methods": {}
+}
