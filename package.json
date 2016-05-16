@@ -2,7 +2,9 @@
   "name": "MediaApp_Rest_Server",
   "version": "1.0.0",
   "main": "server/server.js",
+  "author": "Daniela Scholz",
   "scripts": {
+	"postinstall": "npm install",
     "start": "node .",
     "pretest": "jshint .",
     "posttest": "nsp check"
@@ -25,9 +27,10 @@
     "nsp": "^2.1.0"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/scholzdaniela/mediaapprestserver.git"
   },
+
   "license": "UNLICENSED",
   "description": "MediaApp_Rest_Server"
 }
