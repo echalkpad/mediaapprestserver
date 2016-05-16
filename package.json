@@ -4,7 +4,6 @@
   "main": "server/server.js",
   "author": "Daniela Scholz",
   "scripts": {
-	"postinstall": "npm install",
     "start": "node .",
     "pretest": "jshint .",
     "posttest": "nsp check"
@@ -20,7 +19,8 @@
     "loopback-connector-cloudant": "^1.0.11",
     "loopback-datasource-juggler": "^2.39.0",
     "loopback-ds-timestamp-mixin": "^3.2.4",
-    "serve-favicon": "^2.0.1"
+    "serve-favicon": "^2.0.1",
+	"cfenv": "1.0.x"
   },
   "devDependencies": {
     "jshint": "^2.5.6",
